@@ -130,6 +130,12 @@ button.next {
   background: linear-gradient(90deg, rgb(71, 52, 225) 0%, rgb(108, 45, 230) 35%, rgb(108, 45, 230) 100%) !important;
 }
 
+.next:disabled {
+  border: 1px solid rgb(138, 125, 231) !important;
+  background: rgb(146, 133, 243);
+  background: linear-gradient(90deg, rgb(178, 171, 235) 0%, rgb(158, 123, 228) 35%, rgb(154, 113, 238) 100%) !important;
+}
+
 
 .showSpan {
   display: inline-block;
