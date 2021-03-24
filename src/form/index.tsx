@@ -131,7 +131,7 @@ export const AtechyForm: React.SFC = (): JSX.Element => {
            onChange={change}>
          <option selected>Nationality</option>
          <option value="Nigeria">Nigeria</option>
-         <option value="2">SA</option>
+         <option value="South Africa">South Africa</option>
        </select>
      </div>
 
@@ -142,7 +142,7 @@ export const AtechyForm: React.SFC = (): JSX.Element => {
            onChange={change}>
          <option selected>Country of Residence</option>
          <option value="UAE">UAE</option>
-         <option value="2">Female</option>
+         <option value="US">Female</option>
        </select>
      </div>
 
