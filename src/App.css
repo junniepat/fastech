@@ -1,38 +1,215 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400&display=swap');
+
+
+* {
+  font-family: 'Sora', sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+.bInfo {
+  min-width: 220px;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.selectField {
+  background: #f2f2f2 !important;
+  height: 60px;
+  font-size: 1em !important;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  background: #EFEFEF !important;
+}
+
+.form-control:focus {
+  outline: 1px solid #4B33E1 !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+}
+
+button.pull-right.btn-round.btn-lg.btn.btn-secondary {
+  outline: none !important;
+  border-radius: 40px;
+  background: rgb(71, 52, 225);
+  background: linear-gradient(90deg, rgb(71, 52, 225) 0%, rgb(108, 45, 230) 35%, rgb(108, 45, 230) 100%) !important;
+}
+
+.optionsKey {
+  opacity: 0.8;
+  min-width: 80px;
+  min-height: 40px;
+  line-height: 40px;
+  padding: 5px 25px;
+  text-align: center;
+  border-radius: 50px;
+  background: #efefef;
+  display: inline-block;
+  margin: 10px;
+}
+.optionsKey:hover {
+  opacity: 1;
+}
+
+.radio-img > input {
+  display: none;
+}
+.radio-img > .optionsKey {
+  cursor: pointer;
+}
+.radio-img > input:checked + .optionsKey {
+  background: rgb(71, 52, 225);
+  background: linear-gradient(90deg, rgb(71, 52, 225) 0%, rgb(108, 45, 230) 35%, rgb(108, 45, 230) 100%) !important;
+  color: #fff;
+}
+
+progress {
+	width: 100%;
+	height: 14px;
+  display: block;
+  margin-bottom: 1.3em;
+	/* Important Thing */
+	-webkit-appearance: none;
+  border: none;
+  float: right;
+}
+
+/* All good till now. Now we'll style the background */
+progress::-webkit-progress-bar {
+	background: #ECECEC;
+	border-radius: 50px;
+	padding: 2px;
+	box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Now the value part */
+progress::-webkit-progress-value {
+	border-radius: 50px;
+	box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+  background: rgb(71, 52, 225);
+  background: linear-gradient(90deg, rgb(71, 52, 225) 0%, rgb(108, 45, 230) 35%, rgb(108, 45, 230) 100%) !important;
+	
+	/* Looks great, now animating it */
+	background-size: 25px 14px, 100% 100%, 100% 100%;
+	-webkit-animation: move 5s linear 0 infinite;
+}
+
+/* That's it! Now let's try creating a new stripe pattern and animate it using animation and keyframes properties  */
+
+@-webkit-keyframes move {
+	0% {background-position: 0px 0px, 0 0, 0 0}
+	100% {background-position: -100px 0px, 0 0, 0 0}
+}
+
+/* Prefix-free was creating issues with the animation */
+
+.control {
+  display: inline-block;
+  margin: 25px 15px 25px 0;
+}
+
+button.prev {
+  background: transparent;
+  border: 1px solid #707070 !important;
+  border-radius: 50px;
+  padding: 10px 30px;
+  margin-right: 15px;
+}
+
+button.next {
+  border-radius: 50px;
+  border: 1px solid rgb(71, 52, 225) !important;
+  padding: 10px 30px;
+  color: #fff;
+  background: rgb(71, 52, 225);
+  background: linear-gradient(90deg, rgb(71, 52, 225) 0%, rgb(108, 45, 230) 35%, rgb(108, 45, 230) 100%) !important;
+}
+
+
+.showSpan {
+  display: inline-block;
+  border-radius: 50px;
+  border: 1px solid rgb(71, 52, 225) !important;
+  padding: 10px 30px;
+  color: #fff;
+  background: rgb(71, 52, 225);
+  background: linear-gradient(90deg, rgb(71, 52, 225) 0%, rgb(108, 45, 230) 35%, rgb(108, 45, 230) 100%) !important;
+}
+
+
+.edit {
+  display: inline-block;
+  border: 1px solid transparent;
+  color: rgb(71, 52, 225);
+}
+
+
+
+/* radio button */
+/* only demo styles */
+
+
+
+/* end only demo styles */
+
+.checkbox-custom, .radio-custom {
+  opacity: 0;
+  position: absolute;   
+}
+
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.checkbox-custom-label, .radio-custom-label {
+  position: relative;
+}
+
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+  content: '';
+  background: #fff;
+  border: 1px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  line-height: 12px;
+  padding: 2px;
+  margin-right: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.checkbox-custom:checked + .checkbox-custom-label:before {
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  background: rgb(71, 52, 225);
+  background: linear-gradient(90deg, rgb(71, 52, 225) 0%, rgb(108, 45, 230) 35%, rgb(108, 45, 230) 100%) !important;
+  color: #fff;
+  padding-top: -10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.radio-custom + .radio-custom-label:before {
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.radio-custom:checked + .radio-custom-label:before {
+  padding-top: -10px;
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  color: #FFF;
+  background: rgb(71, 52, 225);
+  background: linear-gradient(90deg, rgb(71, 52, 225) 0%, rgb(108, 45, 230) 35%, rgb(108, 45, 230) 100%) !important;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkbox-custom:focus + .checkbox-custom-label, .radio-custom:focus + .radio-custom-label {
+outline: 1px solid #ddd; /* focus style */
 }

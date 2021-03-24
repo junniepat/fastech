@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {InfoProvider} from './form/hooks/useForm';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <InfoProvider>
+        <App />
+    </InfoProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
