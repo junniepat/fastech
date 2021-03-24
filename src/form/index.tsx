@@ -198,7 +198,7 @@ export const AtechyForm: React.SFC = (): JSX.Element => {
         {additionalDetails && (
           <div style={{ padding: "5% 3%" }}>
               <StepWizard>
-                <Step1 />
+                <Step1 onChange={onChange}/>
                 <Step2 />
                 <Step3 />
                 <Step4 />
